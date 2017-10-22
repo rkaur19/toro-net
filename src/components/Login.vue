@@ -10,9 +10,8 @@
         <button class="btn btn-success" @click="login" type="submit">Login</button>
     </form>
     <h4 class="mx-auto">OR<h4>
-    <form method ="get" action="/auth/github">
-    <button class="btn btn-github" type="submit">
-      <i class="fa fa-github"></i> Login with Github</button>
+    <a href="/auth/github" class="btn btn-github">
+      <i class="fa fa-github"></i> Login with-Github
     </a>
   </div>
 </template>
