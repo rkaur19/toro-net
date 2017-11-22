@@ -13,7 +13,7 @@
     <hr>
   </div>
   <div class="container" v-else>
-    <h4>You must login to access Toro-Net!</h4> //changes made here
+    <h4>You must login to access Toro-Net!</h4> 
   </div>
 </template>
 
