@@ -13,9 +13,20 @@
     <hr>
   </div>
   <div class="container" v-else>
-    <h4>You must login to access Toro-Net!</h4> 
+    <h4></h4>
   </div>
 </template>
+
+<style>
+ .info_section{
+
+    width: 600;
+    height: 400;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+ }
+</style>
 
 <script>
 export default {

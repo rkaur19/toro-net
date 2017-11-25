@@ -1,23 +1,9 @@
 <template>
   <div id="app">
-    <!-- changes at 2:35pm Nov. 21st -->
-    <!-- <div class="container">
-       <form class="" action="index.html" method="post">
-            <div class="well">
-               <h4>Add user here</h4>
-               <div class="form-group">
-                    <label class="pull-left" for="">First Name</label>
-                    <input type="text" class="form-control" name="" placeholder="first name comes here" value="">
-                    <button class="btn btn-primary" type="button" name="button">Submitttt</button>
-               </div>
-            </div>
-       </form>
-    </div> -->
 
-    <!-- changes at 2:35pm Nov. 21st -->
 
  <!-- Navigation bar, fixed top -->
-    <nav class="navbar navbar-expand-lg navbar-inverse bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-inverse bg-dark  text-white fixed-top">
       <a class="navbar-brand" href="index.html">Toro-Net</a>
 
       <!-- responsive button -->
@@ -45,23 +31,6 @@
             <a class="nav-link" href="#"> <span class="fa fa-sign-in"></span> Login </a>
           </li>
 
-
-
-          <!-- no dropdown  needed -->
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li> -->
         </ul>
 
         <form class="form-inline my-2 my-lg-0">
@@ -76,32 +45,151 @@
  <br>
  <br>
 
-<!-- header -->
- <!-- <header class="jumbotron">
-         <div class="container">
-             <div class="row row-header">
-                 <div class="col-12 col-sm-8">
-                     <h1>Social network for csudh</h1>
-                     <p> share and inspire each other !</p>
-                 </div>
-                 <div class="col col-sm">
-                 </div>
-             </div>
-         </div>
-     </header> -->
-
-  <!-- changes at 2:35pm Nov. 21st -->
-  <!-- body -->
-  <div class="container">
+  <div class="container  bg-light">
 
            <hr>
           <router-link to="/">Home</router-link>
           <a v-if="!this.$store.state.user.displayName" href="/register" @click="register">Register</a>
           <a v-if="this.$store.state.user.displayName" href="/logout" @click="logout">Logout</a>
           <router-link v-else to="/login">Login</router-link>
-          <h1>{{ title }}</h1>
+          <!-- <h1>{{ title }}</h1> -->
           <hr />
           <router-view />
+
+
+  </div>
+
+  <div class="container bg-light">
+    <div class="row">
+        <!-- display information on home page -->
+        <div class="col-sm-0 col-lg-8">
+            <br>
+          <div class="row offset-sm-2">
+               <h2>Connect with friends from CSUDH. </h2>
+          </div>
+          <br>
+          <div class="row offset-sm-1">
+            <p><span class="fa fa-pencil-square-o fa-3x"></span>  See posts and updates from friends.</p>
+          </div>
+          <br>
+          <div class="row offset-sm-1">
+            <p> <span class="fa fa-share-alt-square fa-3x"></span>  Share what's new in your life.</p>
+          </div>
+          <br>
+          <div class="row offset-sm-1">
+            <p><span class="fa fa-users fa-3x"></span>  Connect with more...</p>
+          </div>
+
+
+
+
+
+        </div>
+
+      <!-- // sign up form -->
+      <div class="form col-sm-12 col-lg-4">
+          <h2 class="strong text-left">Join Us Now!</h2>
+          <p class="text-left">Fun is on the way...</p>
+          <!-- <div class="row">
+              <input type="text" name="" value="" placeholder="First Name">
+              <input type="text" name="" value="" placeholder="Last Name">
+          </div>
+          <div class="row">
+              <input type="text" name="" value="" placeholder="Mobile number/Email">
+          </div>
+          <div class="row">
+              <input type="text" name="" value="" placeholder="Password">
+          </div>
+          <div class="row">
+              <input type="text" name="" value="" placeholder="Reenter Password">
+          </div> -->
+
+
+          <form class="fomr-horizontal" role="form">
+              <div class="form-group row">
+                <!-- <label for="name" class="col-sm-3 control-label">Full Name</label> -->
+                <!-- first name -->
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" placeholder="First name">
+                  </div>
+                  <!-- <div class="col-sm-1">
+
+                  </div> -->
+                  <!-- last name -->
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+              </div>
+              <!-- email/ phone number -->
+              <div class="form-group row">
+                    <!-- <label for="staticEmail" class="col-sm-3 col-form-label">Email/Phone</label> -->
+                    <div class="col-sm-12">
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email or Phone">
+                    </div>
+              </div>
+              <div class="form-group row">
+                <!-- <label for="inputPassword" class="col-sm-3 col-form-label">Password</label> -->
+                <div class="col-sm-12">
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                </div>
+              </div>
+              <div class="form-group row">
+                <!-- <label for="inputPassword" class="col-sm-3 col-form-label">Password(Confirm)</label> -->
+                <div class="col-sm-12">
+                  <input type="password" class="form-control" id="ConfirmPassword" placeholder="Confirm password">
+                </div>
+              </div>
+              <!-- Date of Birth -->
+              <!-- <div class="form-control">
+                <label for="">Date of Birth</label>
+                  <div class="col-sm-12">
+                    <input type="date" name="birthdate" value="" class="form-control" placeholder="Date of Birth">
+
+                  </div>
+              </div> -->
+              <br>
+              <!-- radio buttons for genders -->
+              <div class="form-group row">
+                    <div class="form-check col-sm-3">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                              <strong>Female</strong>
+                            </label>
+                    </div>
+                    <div class="form-check col-sm-3">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <strong>Male</strong>
+                          </label>
+                      </div>
+              </div>
+
+              <div class="control-group col-12">
+                    <!-- Button -->
+                    <div class="controls row">
+                      <button class="btn btn-primary btn-block">Sign up</button>
+                    </div>
+             </div>
+              <!-- terms -->
+              <div class="col-12 text-left font-italic small">
+                By clicking Create Account, you agree to our
+                <a href="#">Terms</a>
+                and that you have read our
+                <a href="#">Data Policy</a>
+                , including our
+                <a href="#">Cookie Use</a>
+                . You may receive SMS Notifications from Toro-Net and can opt out at any time.
+              </div>
+
+
+          </form>
+
+
+
+      </div>
+    </div>
+
+
 
 
   </div>
@@ -111,19 +199,8 @@
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
 </div>
-
+<hr>
  <!-- footer  -->
 
     <footer class="footer">
