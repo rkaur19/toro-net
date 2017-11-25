@@ -1,17 +1,48 @@
-<template>
+<template background=".\CSUDH BG.png">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <div class="container" v-if="this.$store.state.user.displayName">
-    <h4>Welcome {{this.$store.state.user.displayName}}! What's happening?</h4>
-    <br>
-    <div class="form-group">
-      <input type="text" class="form-control" id="title" placeholder="Title" v-model="title">
-    </div>
-    <div class="form-group">
-      <textarea class="form-control" id="body" rows="5" placeholder="Write your thoughts here..." v-model="body">
-      </textarea>
-    </div>
-    <button class="btn btn-primary" @click="addPost()">Post!</button>
-    <hr>
-  </div>
+    <div id="navBar">
+        <ul>
+          <li><div style="margin: auto; display: block;background-color: transparent;"><img src="logo.jpg" alt="{ToRoNeT}" style="width:50px;height:50px;"></div></li>
+          <li><div id="sBar"> <input type="text" name="search" placeholder="Search.."> </div></li>
+          <div style="float: right;">
+              <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-user" aria-hidden="true" style="font-size:24px"></i></a>
+                  <div class="dropdown-content">
+                      <a href="#">Friends</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Logout</a>
+                  </div>
+              </li>
+              <li><a href="#news"><i class="fa fa-globe" aria-hidden="true" style="font-size:24px"></i></a></li>
+
+              <li class="dropdown"><a href="javascript:void(0)"><i class="fa fa-cog" aria-hidden="true" style="font-size:24px"></i></a>
+                  <div class="dropdown-content">
+                      <a href="#">Change Stuff</a>
+                      <a href="#">?</a>
+                      <a href="#">?</a>
+                  </div>
+              </li>
+          </div>
+        </ul>
+      </div>
+        <div id="background1">
+          <h1>Welcome to Toro-Net</h1>
+          <br>
+          <form action="/html/tags/html_form_tag_action.cfm" method="post">
+          <textarea name="comments" id="comments" style="width:55%;height:150px;padding:2%;font-size:1.2em;background:url('http://www.oneequalworld.com/wp-content/uploads/2017/02/shutterstock_201120113.jpg');">
+          What's on your mind?
+
+          Tell us about your wonderful adventures!
+
+          :) </textarea>
+          <br>
+          <input type="submit" value="Mail it!">
+
+          <br>
+          <br>
+          <br>
+        </div>
   <div class="container" v-else>
     <h4>You must login to access Toro-Net!</h4> //changes made here
   </div>
@@ -45,3 +76,91 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+
+body {
+    background-color: rgb(196, 156, 140);
+    background-image: url("https://www.csudh.edu/Assets/Global/backgrounds/Background-LSU1-yellow.jpg");
+    background-repeat: no-repeat;
+    margin-left: 3%;
+    margin-right: 3%;
+    background-position: center;
+    background-size:cover;
+}
+
+#background1{
+    color:#333;
+   /* opacity: .5; */
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #860038;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+input[type=text] {
+    width: 100%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 150%;
+}
+
+div #sBar{
+    text-align: center;
+    padding: 14px 16px;
+}
+
+</style>
