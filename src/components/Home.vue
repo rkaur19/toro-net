@@ -1,6 +1,7 @@
 <template background=".\CSUDH BG.png">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <div class="container" v-if="this.$store.state.user.displayName">
+<<<<<<< HEAD
     <div id="navBar">
         <ul>
           <li><div style="margin: auto; display: block;background-color: transparent;"><img src="logo.jpg" alt="{ToRoNeT}" style="width:50px;height:50px;"></div></li>
@@ -43,21 +44,75 @@
           <br>
           <br>
         </div>
+=======
+    <h4>Welcome {{this.$store.state.user.displayName}}! What's happening?</h4>
+    <br>
+    <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-sm-7" >
+    <div class="form-group">
+      <input type="text" class="form-control" id="title" placeholder="Title" v-model="title">
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" id="body" rows="5" placeholder="Write your thoughts here..." v-model="body">
+      </textarea>
+    </div>
+    <button class="btn btn-primary" @click="addPost()">Post!</button>
+    <hr>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3" style="background-color:lavenderblush;">
+    <div class="container-fluid container-scroll">
+  <div class="row columns">
+    <div class="col-md-2">Field 1</div>
+    <div class="col-md-2">Field 2</div>
+    <div class="col-md-2">Field 3</div>
+    <div class="col-md-2">Field 4</div>
+  </div>
+</div>
+
+<div class="container-fluid container-scroll">
+  <div class="row columns">
+    <div class="col-md-2">Field 1</div>
+    <div class="col-md-2">Field 2</div>
+    <div class="col-md-2">Field 3</div>
+    <div class="col-md-2">Field 4</div>
+  </div>
+</div>
+
+<div class="container-fluid container-scroll">
+  <div class="row">
+    <div class="col-md-2">Field 1</div>
+    <div class="col-md-2">Field 2</div>
+    <div class="col-md-2">Field 3</div>
+    <div class="col-md-2">Field 4</div>
+  </div>
+</div>
+    </div>
+</div>
+  <div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-7" >
+  <div class="form-group">
+    <input type="text" class="form-control" id="title" placeholder="Title" v-model="title">
+  </div>
+  <div class="form-group">
+    <textarea class="form-control" id="body" rows="5" placeholder="Write your thoughts here..." v-model="body">
+    </textarea>
+  </div>
+  <button class="btn btn-primary" @click="addPost()">Post!</button>
+  <hr>
+  </div>
+
+  <div class="col-sm-3"></div>
+</div>
+  </div>
+
+>>>>>>> 317b065c85b985b1f4c41979e152af673884092e
   <div class="container" v-else>
-    <h4></h4>
+    <h4>You must login to access Toro-Net!</h4> //changes made here
   </div>
 </template>
-
-<style>
- .info_section{
-
-    width: 600;
-    height: 400;
-    font-size: 20px;
-    font-weight: 700;
-    font-style: italic;
- }
-</style>
 
 <script>
 export default {
@@ -88,6 +143,7 @@ export default {
 }
 </script>
 
+<<<<<<< HEAD
 <style scoped>
 
 body {
@@ -172,6 +228,30 @@ input[type=text]:focus {
 div #sBar{
     text-align: center;
     padding: 14px 16px;
+=======
+<style>
+@media (min-width: 992px) {
+  .container-scroll {
+    overflow-x: auto;
+  }
+  .container-scroll .columns-16 {
+    width: 133.33333333vw;  /* = 100vw * 16/12 */
+  }
+  .container-scroll .columns-24 {
+    width: 200vw;  /* = 100vw * 24/12 */
+  }
+  .container-scroll .col-md-2 {
+    width: 16.66666667vw !important;
+  }
+}
+
+.container-scroll > .row {
+  margin-top: 24px;
+}
+.container-scroll > .row > .col-md-2 {
+  font-weight: bold;
+  text-align: center;
+>>>>>>> 317b065c85b985b1f4c41979e152af673884092e
 }
 
 </style>
