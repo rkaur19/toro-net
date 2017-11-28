@@ -4,6 +4,8 @@
     <br>
 
 
+
+
     <div class = "container">
             <div class="row">
 
@@ -21,14 +23,14 @@
 
                             <div class="col-xs-6 col-md-push-2">
                                      <div class="sidebar-nav-fixed affix">
-                                            <div class="demo-content bg-alt">.col-sm-6</span></div>
+                                            <div class="demo-content bg-alt">Tree</span></div>
                                          </div>
                                         <!--/sidebar-nav-fixed -->
                           </div>
                 </div>
       </div>
 
-<br>
+<!-- <br>
 
               <div class="row">
 
@@ -41,9 +43,9 @@
                  </textarea>
                </div>
                <button class="btn btn-primary" @click="addPost()">Post!</button></div>
-</div>
+</div> -->
 
-<br>
+<!-- <br>
 
 <div class="row">
 
@@ -56,7 +58,7 @@
    </textarea>
  </div>
  <button class="btn btn-primary" @click="addPost()">Post!</button></div>
-</div>
+</div> -->
 
 
   <div class="container" v-else>
@@ -94,6 +96,7 @@ export default {
     this.$store.dispatch('getUser')
   },
 }
+
 </script>
 
 <style>
@@ -131,6 +134,7 @@ export default {
    }
    .demo-content.bg-alt{
        background: #778899
+       
 ;
    }
 
